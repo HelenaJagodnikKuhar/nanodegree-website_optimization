@@ -378,7 +378,7 @@ var pizzaElementGenerator = function(i) {
   pizzaContainer.id = "pizza" + i;                // gives each pizza element a unique id
   pizzaImageContainer.style.width="35%";
 
-  pizzaImage.src = "images/pizza.png";
+  pizzaImage.src = "images/pizza_mobile.png";
   pizzaImage.classList.add("img-responsive");
   pizzaImageContainer.appendChild(pizzaImage);
   pizzaContainer.appendChild(pizzaImageContainer);
@@ -477,7 +477,7 @@ var resizePizzas = function(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
-for (var i = 2; i < 10; i++) {
+for (var i = 2; i < 100; i++) {
   var pizzasDiv = document.getElementById("randomPizzas");
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
@@ -512,11 +512,13 @@ function updatePositions(scrollTop) {
 
   var items = document.querySelectorAll('.mover');
 
+
   for (var i = 0; i < items.length; i++) {
     // document.body.scrollTop is no longer supported in Chrome.
     var phase = Math.sin((scrollTop / 1250) + (i % 5));
    // items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
-   // items[i].style.trnsform = "translateY( items[i].basicLeft + 100 * phase + 'px' )";
+   var x = items[i].basicLeft + 100 * phase;
+   items[i].style.transform = "translateX(" + x + "px )";
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
@@ -545,7 +547,7 @@ function onPageLoad(){
   for (var i = 0; i < 200; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
-    elem.src = "images/pizza.png";
+    elem.src = "images/pizza_mobile.png";
     //change pizza.png size
     elem.style.height = "100px";
     elem.style.width = "73.333px";
