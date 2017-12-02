@@ -12,7 +12,7 @@ gulp.src('views/pizza.development.html')
   .pipe(inline({
     base: './',
     js: uglify,
-    css: [minifyCss, autoprefixer({ browsers:['last 2 versions'] })],
+    css: minifyCss,
     disabledTypes: ['svg', 'img']
   }))
   .pipe(rename("pizza.html"))
@@ -23,7 +23,7 @@ gulp.src('index.development.html')
   .pipe(inline({
     base: './',
     js: uglify,
-    css: [minifyCss, autoprefixer({ browsers:['last 2 versions'] })],
+    css: minifyCss,
     disabledTypes: ['svg', 'img'],
     ignore: ['css/print.css']
   }))
