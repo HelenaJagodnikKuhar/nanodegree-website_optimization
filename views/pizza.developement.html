@@ -1,82 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
-  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-  <!-- Latest compiled and minified CSS -->
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap-grid.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
- -->
-
-  <style type="text/css">
-
-    * {
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      -box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Trebuchet MS", Helvetica, sans-serif;
-      background: black;
-      //will-change:transform;
-    }
-
-    input {
-      background: grey;
-      font-size: 18px;
-    }
-
-    form {
-      display: inline-block;
-    }
-
-    .centered {
-      text-align: center;
-    }
-
-    #pizzaSize {
-      font-weight: 800;
-    }
-
-    .mover {
-      position: fixed;
-      width: 256px;
-      z-index: -1;
-    }
-
-    .randomPizzaContainer {
-      float: left;
-      display: flex;
-      height: 325px;
-    }
-
-    .randomPizzaContainer:after {
-      content: "";
-      display: table;
-      clear:both;
-    }
-
-     .container {
-      background-color: rgba(240, 60, 60, 0.8);
-    }
-
-    .select_small .randomPizzaContainer{
-      width: 25%;
-    }
-
-    .select_medium .randomPizzaContainer{
-        width: 33%;
-    }
-
-    .select_large .randomPizzaContainer{
-      width: 50%;
-    }
-
-/*    #movingPizzas1{
-      display: none;;
-    }*/
-  </style>
-}
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
 </head>
 
 <body>
@@ -110,6 +36,7 @@
     </div>
     <div id="callToAction" class="row">
       <div class="col-md-4">
+         <!-- made smaller image -->
         <img src="images/pizzeria_for_pizza_mobile.jpg" class="img-responsive" > <!-- Image credit to: http://commons.wikimedia.org/wiki/File:HK_TST_night_%E5%98%89%E8%98%AD%E9%81%93_Granville_Road_restaurant_Paisano's_Pizzeria_pizza_Dec-2013.JPG -->
       </div>
       <div class="col-md-8">
@@ -195,6 +122,7 @@
           </div>
           <div id="pizza1" class="randomPizzaContainer">
             <div style="width:35%">
+              <!-- made smaller image -->
               <img src="images/pizza_mobile.png" class="img-responsive">
             </div>
             <div style="width:65%">
@@ -215,5 +143,4 @@
 
 </body>
 
-</html>
 </html>

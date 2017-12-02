@@ -1,4 +1,7 @@
+// gulp.js configuration
 var gulp = require('gulp');
+
+//replaces <script> and <link> tags with the corresponding inlined files
 var inline = require('gulp-inline')
   , uglify = require('gulp-uglify')
   , minifyCss = require('gulp-minify-css')
@@ -10,7 +13,7 @@ gulp.src('views/pizza.developement.html')
     base: './',
     js: uglify,
     css: [minifyCss, autoprefixer({ browsers:['last 2 versions'] })],
-    disabledTypes: ['svg', 'img'] // Only inline css files
+    disabledTypes: ['svg', 'img']
   }))
   .pipe(rename("pizza.html"))
   .pipe(gulp.dest('views/'));
@@ -21,7 +24,8 @@ gulp.src('index.developement.html')
     base: './',
     js: uglify,
     css: [minifyCss, autoprefixer({ browsers:['last 2 versions'] })],
-    disabledTypes: ['svg', 'img'] // Only inline css files
+    disabledTypes: ['svg', 'img'],
+    ignore: ['css/print.css']
   }))
   .pipe(rename("index.html"))
   .pipe(gulp.dest('./'));
