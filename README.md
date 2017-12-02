@@ -15,7 +15,7 @@ I used Gulp to automatically perform optimizations such as minification of CSS a
 - resized and optimized image compression ratios
 
 ## main.js
-- instate of changing pizzas sizes which causes a lot of DOM changes I implemented the size change with simple CSS rules
+- instead of changing pizzas sizes which causes a lot of DOM changes I implemented the size change with simple CSS rules
 - minimized css queries in for loops
 - made scroll animations with CSS transform (to minimize layout recalculations)
 - resized and optimized image compression ratios
