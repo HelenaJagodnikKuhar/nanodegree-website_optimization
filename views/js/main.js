@@ -402,8 +402,8 @@ var pizzaElementGenerator = function(i) {
 var resizePizzas = function(size) {
   window.performance.mark("mark_start_resize");   // User Timing API function
 
-  // Changes the value for the size of the pizza above the slider
-  // changes their widths with css style
+  // changes the value for the size of the pizza above the slider
+  // size change with CSS
   function changeSliderLabel(size) {
     document.querySelector("#randomPizzas").className = "row";
     switch(size) {
@@ -497,7 +497,7 @@ window.addEventListener('scroll', function(){
 
 
 // Generates the sliding pizzas when the page loads.
-// var movingPizzas calls an element only once
+// minimized calls in the loop
 function onPageLoad(){
   var cols = 8;
   var s = 256;
@@ -516,6 +516,7 @@ function onPageLoad(){
  //on the top is always 0, avoid unnecessary recalculation
   updatePositions(0);
 }
-onPageLoad()
-//disabled onPageLoad and added on the end of the file to avoid waiting for the page to load
+onPageLoad();
+
+//removed to avoid recalculation
 //document.addEventListener('DOMContentLoaded', onPageLoad);
