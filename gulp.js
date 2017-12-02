@@ -8,7 +8,7 @@ var inline = require('gulp-inline')
   , autoprefixer = require('gulp-autoprefixer')
   , rename = require('gulp-rename');
 
-gulp.src('views/pizza.developement.html')
+gulp.src('views/pizza.development.html')
   .pipe(inline({
     base: './',
     js: uglify,
@@ -19,7 +19,7 @@ gulp.src('views/pizza.developement.html')
   .pipe(gulp.dest('views/'));
 
 
-gulp.src('index.developement.html')
+gulp.src('index.development.html')
   .pipe(inline({
     base: './',
     js: uglify,

@@ -1,25 +1,25 @@
 # Website Performance Optimization portfolio project
-My challange was to optimize online portfolio for speed.
+My challenge was to optimize online portfolio for speed.
 
 I used Gulp to automatically perform optimizations such as minification of CSS and JS and inlining.
 
-## index.developement.html
+## index.development.html
 - disabled web fonts
-- minified and inlined stayle sheets with gulp
+- minified and inlined style sheets with gulp
 - defined print media type for loading print.css stylesheet
 - defined async attribute for asynchronous loading Google Analytics
 - resized and optimized image compression ratios
 
-## pizza.developement.html
-- minified and inlined stayle sheets with gulp
+## pizza.development.html
+- minified and inlined style sheets with gulp
 - resized and optimized image compression ratios
 
 ## main.js
-- for changing pizzas sizes whic couses a lot of DOM changes I implemented the size change with a simple CSS rules
+- for changing pizzas sizes which causes a lot of DOM changes I implemented the size change with simple CSS rules
 - minimized css queries in for loops
 - made scroll animations with CSS transform (to minimize layout recalculations)
 - resized and optimized image compression ratios
-- remove the use of DOMContentLoaded event to avoid recalculations 
+- remove the use of the DOMContentLoaded event to avoid recalculations 
 - changed the updatePositions function to avoid unnecessary recalculation to get the scrollTop value
 
 [Demo](https://helenajagodnikkuhar.github.io/nanodegree-website_optimization/)
@@ -55,14 +55,14 @@ Visit http://localhost:8080 to view your server.
 
 ### Tech
 
-Online portfolio uses open source projects to work properly:
+The online portfolio uses open source projects to work properly:
 
 * [Twitter Bootstrap] - great UI boilerplate for modern web apps
-* [node.js] - evented I/O for the backend
+* [node.js] - for builds
 * [Gulp] - the streaming build system
 
 ### Contributing
-Project assets were written as part of Frontend nanodegree Website Performance Optimization portfolio project submission. The material is [here](https://github.com/udacity/frontend-nanodegree-mobile-portfolio).
+Project assets were written as part of a Frontend nanodegree Website Performance Optimization portfolio project submission. The material is [here](https://github.com/udacity/frontend-nanodegree-mobile-portfolio).
 I optimize the critical rendering path and make the page render as quickly as possible by applying the techniques I've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
 ### License
