@@ -4,7 +4,7 @@ My challenge was to optimize online portfolio for speed.
 I used Gulp to automatically perform optimizations such as minification of CSS and JS and inlining.
 
 ## index.development.html
-- disabled web fonts
+- included Google fonts with Web Font Loader
 - minified and inlined style sheets with gulp
 - defined print media type for loading print.css stylesheet
 - defined async attribute for asynchronous loading Google Analytics
@@ -15,6 +15,7 @@ I used Gulp to automatically perform optimizations such as minification of CSS a
 - resized and optimized image compression ratios
 
 ## main.js
+- reduced the number of pizzas calculated based on screen sizes
 - instead of changing pizzas sizes which causes a lot of DOM changes I implemented the size change with simple CSS rules
 - minimized css queries in for loops
 - made scroll animations with CSS transform (to minimize layout recalculations)
