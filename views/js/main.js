@@ -470,12 +470,12 @@ function updatePositions(scrollTop) {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.querySelectorAll('.mover');
+  var items = document.getElementsByClassName('mover');
 
   for (var i = 0; i < items.length; i++) {
     // document.body.scrollTop is no longer supported in Chrome.
     var phase = Math.sin((scrollTop / 1250) + (i % 5));
-    var x = items[i].basicLeft + 100 * phase;
+    var x = 100 * phase;
     //animations made with css stayle
     items[i].style.transform = "translateX(" + x + "px )";
   }
@@ -503,6 +503,9 @@ window.addEventListener('scroll', function(){
 function onPageLoad(){
   var s = 256;
   var cols = Math.floor(window.screen.width/s);
+  if (cols == 5) {
+    cols = 6;
+  }
   var movingPizzas = document.querySelector("#movingPizzas1");
   //reduced the number of pizzas
   for (var i = 0; ; i++) {
@@ -518,7 +521,7 @@ function onPageLoad(){
     elem.src = "images/pizza_mobile.png";
     elem.style.height = "100px";
     elem.style.width = "73.333px";
-    elem.basicLeft = x;
+    elem.style.left = x + 'px';
     elem.style.top = y + 'px';
     movingPizzas.appendChild(elem);
   }
